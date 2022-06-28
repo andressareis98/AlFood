@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 import http from "../../../http"
 import IRestaurante from "../../../interfaces/IRestaurante"
 
+
 const FormularioRestaurante = () =>{
 
     const parametros = useParams()
@@ -37,9 +38,9 @@ const FormularioRestaurante = () =>{
         evento.preventDefault()
     }
     return(
-        <Box sx={{display: "flex", flexDirection: "column", alignItems:"center" }}>
+        <Box sx={{display: "flex", flexDirection: "column", alignItems:"center", flexGrow: 1}}>
             <Typography component="h1" variant ="h6">Formulário de Restaurantes</Typography>
-            <Box component="form" onSubmit={aoSubmeterForm}>
+            <Box component="form" sx={{width: '100%'}} onSubmit={aoSubmeterForm}>
                 <TextField 
                     value={nomeRestaurante} 
                     id="standard-basic" 
